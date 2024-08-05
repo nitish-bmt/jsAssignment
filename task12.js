@@ -1,3 +1,4 @@
+// TODO
 function delay(ms){
   return new Promise((resolve, reject)=>{ setTimeout(()=>resolve, ms)});
 }
@@ -13,6 +14,7 @@ function fetchHelp(url){
     }
   });
 }
+
 function fetchWithExponentialBackoff(url, maxRetries){
   return new Promise(async(resolve, reject)=>{
 

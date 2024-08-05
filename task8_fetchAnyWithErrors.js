@@ -1,18 +1,21 @@
+// Why does await NOT work with forEach
+// but works with for ????
 
 function fetchAnyWithErrors(urls){
 
   return new Promise(async(resolve, reject)=>{
 
-    await urls.forEach( async(url) => {
+    for( const url of urls ){
       try{
-        const res = await fetch(url);
-        resolve(res);
+        resolve(await fetch(url));
       }
       catch(error){
         console.log('one api failed');
       }
-    });
+    }
+
     reject('All apis failed!');
+
   });
 }
 

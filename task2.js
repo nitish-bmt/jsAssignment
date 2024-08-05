@@ -1,8 +1,9 @@
 console.log('Program Started!');
-console.log('Program in progress...');
 
 const p = new Promise((resolve, reject)=>{
 		
+  console.log('Program in progress...');
+
 	setTimeout(()=>{
 		resolve('Step 1 complete');
 	}, 3000);
@@ -19,6 +20,6 @@ const p = new Promise((resolve, reject)=>{
 });
 
 p
-.then((data)=>{console.log(data)})
-.then((data)=>{console.log(data)})
-.catch((err)=>{console.log('Program failed: ', err)});
+  .then((data)=>{console.log(data)})
+  .then((data)=>{console.log(data)})
+  .catch((err)=>{console.log('Program failed: ', err)});
