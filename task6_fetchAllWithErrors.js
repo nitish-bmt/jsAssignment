@@ -21,3 +21,4 @@ const urls = ['https://64c3af5b620f470f9014abc97971528a.api.mockbin.io/', 'https
 fetchAllWithErrors(urls)
 	.then(data=>console.log(data))
 	.catch(err=>console.log(err));
+

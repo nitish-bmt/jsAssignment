@@ -18,5 +18,6 @@ function fetchWithRetry(url, tries){
 const url_failure = 'https://www.fakeapi.co.uk/';
 const url_success = 'https://api.open-meteo.com/v1/forecast?latitude=22.5411&longitude=88.3378&daily=weather_code,temperature_2m_max,temperature_2m_min&forecast_days=1';
 
-fetchWithRetry(url_failure, 3).then(data=>console.log(data))
+fetchWithRetry(url_failure, 3)
+	.then(data=>console.log(data))
 	.catch(err=>console.log(err));
